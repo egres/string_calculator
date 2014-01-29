@@ -12,6 +12,10 @@ describe StringCalculator do
     
     it "returns 3 when given '1,2'" do
       expect(StringCalculator.add("1,2")).to eq(3)
-    end    
+    end
+    
+    it "returns 6 when given '1,2,3'" do
+      expect(StringCalculator.add("1,2,3")).to eq(6)
+    end
   end
 end
