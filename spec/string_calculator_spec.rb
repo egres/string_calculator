@@ -6,16 +6,20 @@ describe StringCalculator do
       expect(StringCalculator.add("")).to eq(0)
     end
     
-    it "returns 1 when given '1'" do
+    it "handles a single number input" do
       expect(StringCalculator.add("1")).to eq(1)
     end
     
-    it "returns 3 when given '1,2'" do
+    it "handles 2 number input" do
       expect(StringCalculator.add("1,2")).to eq(3)
     end
     
-    it "returns 6 when given '1,2,3'" do
+    it "handles unlimited number input" do
       expect(StringCalculator.add("1,2,3")).to eq(6)
+    end
+    
+    it "handles new line characters '\n' as delimiters" do
+      expect(StringCalculator.add("1\n2,3")).to eq(6)
     end
   end
 end

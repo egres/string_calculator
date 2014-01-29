@@ -6,7 +6,8 @@ module StringCalculator
   def self.add(numbers)
     return 0 if numbers.empty?
     
-    numbers.split(',').
+    numbers.split(%r{,|\n}).
+            tap{|n| raise "Delimiter violation" if n.include?('')}.
             map{ |n| n.to_i }.
             inject(:+)   
   end
