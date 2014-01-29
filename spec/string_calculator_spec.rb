@@ -25,5 +25,13 @@ describe StringCalculator do
     it "handles custom delimiters" do
       expect(StringCalculator.add("//;\n1;2")).to eq(3)
     end
+    
+    it "handles custom delimiter strings" do
+      expect(StringCalculator.add("//delimiter\n1delimiter2")).to eq(3)
+    end
+    
+    it "raises exception if negative numbers are present" do
+      expect{ StringCalculator.add("1,-2,3,-4") }.to raise_error(RuntimeError, /\[-2, -4\]/)
+    end
   end
 end
