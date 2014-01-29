@@ -20,13 +20,13 @@ Or install it yourself as:
 ## Usage
 
     - The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will 
-     return 0) for example ```""``` or ```"1"``` or ```"1,2"``
+     return 0) for example "" or "1" or "1,2"
      
     - to change a delimiter, the beginning of the string can contain a separate line that looks like 
-     this: ```//[delimiter]\n[numbers…]``` for example ```//;\n1;2``` returns three where the 
-     default delimiter is ```;``` .`
+     this: //[delimiter]\n[numbers] for example //;\n1;2 returns three where the 
+     default delimiter is ;.
      
-    - Calling Add with a negative number will throw an exception “negatives not allowed” – and 
+    - Calling Add with a negative number will throw an exception "negatives not allowed" – and 
     the negative that was passed. If there are multiple negatives, all of them are the exception message.
      
 
